@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<ul>
+		    <li>班长今天老帅了，嗷嗷帅...</li>
+		    <li>班长今天老帅了，嗷嗷帅...</li>
+		    <li>班长今天老帅了，嗷嗷帅...</li>
+		    <li>班长今天老帅了，嗷嗷帅...</li>
+		    <li class="c1">班长今天老帅了，嗷嗷帅...</li>
+		    <li class="c1">班长今天老帅了，嗷嗷帅...</li>
+		    <li id="c2">班长今天老帅了，嗷嗷帅...</li>
+		    <li>班长今天老帅了，嗷嗷帅...</li>
+		    <li>班长今天老帅了，嗷嗷帅...</li>
+		    <li>班长今天老帅了，嗷嗷帅...</li>
+		    <li>班长今天老帅了，嗷嗷帅...</li>
+		</ul>
+	</body>
+</html>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+	$(function(){
+		alert(1);
+	})
+	$(function(){
+		alert(2);
+	})
+	$("li")[0].onclick=function(){
+		alert(0);
+	}
+	$("li").eq(1).click(function(){
+		alert(1);
+	})
+    $("li:odd").css("background","red");
+    $("li:even").css("background","blue");
+    var oLi=document.getElementsByTagName("li");
+    $(oLi).get(2).style.background="yellow";
+    $(oLi).eq(3).css("background","green");
+    $(".c1").css("background","skyblue");
+    $("#c2").css("background","deepskyblue");
+    $("li:gt(8)").css("background","deeppink");
+    $("li:lt(1)").css("background","gold");
+</script>
