@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="滑出" />
+		<input type="button" value="滑入" />
+		<input type="button" value="切换滑动" />
+		<input type="button" value="淡入" />
+		<input type="button" value="淡出" />
+		<input type="button" value="切换淡化" />
+		<input type="button" value="改变透明度" />
+		<div style="background:skyblue;width:400px;height:400px"></div>
+	</body>
+</html>
+<script src="js/jquery-1.11.1.js"></script>
+<script>
+	$("input:eq(0)").click(function(){
+	    $("div").slideUp();
+	})
+	$("input:eq(1)").click(function(){
+	    $("div").slideDown();
+	})
+	$("input:eq(2)").click(function(){
+	    $("div").slideToggle();
+	})
+	$("input:eq(3)").click(function(){
+	    $("div").fadeIn();
+	})
+	$("input:eq(4)").click(function(){
+	    $("div").fadeOut();
+	})
+	$("input:eq(5)").click(function(){
+	    $("div").fadeToggle();
+	})
+	$("input:eq(6)").click(function(){
+	    $("div").fadeTo(2000,0.5);
+	})
+</script>
